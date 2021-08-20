@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>1.50813cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.43625cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>3.05562cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.62646cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox19">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Item Code</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox19</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox5">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>:</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="ItemCode">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!ItemCode.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>ItemCode</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox20">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Item Name</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox20</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox6">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>:</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox6</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="ItemName1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!ItemName.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>ItemName1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox21">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Location</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox21</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox7">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>:</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Location1">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Location.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Location1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.54709cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Spec">
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Spec.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Spec</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>3</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Image">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Image.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!Image.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <TablixHeader>
+                <Size>2.57683cm</Size>
+                <CellContents>
+                  <Image Name="Image1">
+                    <Source>Database</Source>
+                    <Value>=Fields!Image.Value</Value>
+                    <MIMEType>image/bmp</MIMEType>
+                    <Sizing>Fit</Sizing>
+                    <ZIndex>1</ZIndex>
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                      </Border>
+                    </Style>
+                  </Image>
+                </CellContents>
+              </TablixHeader>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>QrCode</DataSetName>
+        <Height>2.37355cm</Height>
+        <Width>7.57683cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>0.93447in</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+    </Style>
+  </Body>
+  <Width>2.983in</Width>
+  <Page>
+    <PageHeight>2.5cm</PageHeight>
+    <PageWidth>7.5cm</PageWidth>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>48e59eaf-a5ab-4928-b40d-ca62b65aaccc</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="QrCode">
+      <Query>
+        <DataSourceName>DataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Image">
+          <DataField>Image</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="ItemCode">
+          <DataField>ItemCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemName">
+          <DataField>ItemName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Spec">
+          <DataField>Spec</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Location">
+          <DataField>Location</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\VB\Tooling\Tooling\DataSet.xsd</rd:SchemaPath>
+        <rd:TableName>DataTable_QrLable</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="Qr">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>4a70c8a4-3a3a-48ed-9551-9e3874aca4e1</rd:ReportID>
+</Report>
