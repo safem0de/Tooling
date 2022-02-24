@@ -24,48 +24,49 @@
                         <asp:DropDownList ID="DrpProcess" runat="server" CssClass="form-control">
                             <asp:ListItem></asp:ListItem>
                             <asp:ListItem>PURCHASE</asp:ListItem>
-                                <asp:ListItem>TORNOS &MITSUBISHI (M1)</asp:ListItem>
-                                <asp:ListItem>L-16 (M1)</asp:ListItem>
-                                <asp:ListItem>L-10 (M1)</asp:ListItem>
-                                <asp:ListItem>HOBBING (M1)</asp:ListItem>
-                                <asp:ListItem>B0205 (M1)</asp:ListItem>
-                                <asp:ListItem>RL-20 (M1)</asp:ListItem>
-                                <asp:ListItem>CUTTING & ESCO (M1)</asp:ListItem>
-                                <asp:ListItem>NP-GL (M1)</asp:ListItem>
-                                <asp:ListItem>TURNING MB50 (M1)</asp:ListItem>
-                                <asp:ListItem>DEBURRIG,DILL&TAPPING (M1)</asp:ListItem>
-                                <asp:ListItem>OCEAN (M1)</asp:ListItem>
-                                <asp:ListItem>ROLLING (M1)</asp:ListItem>
-                                <asp:ListItem>TURNING B-12,F16 (M1)</asp:ListItem>
-                                <asp:ListItem>CGM (M1)</asp:ListItem>
-                                <asp:ListItem>M/C CENTER (M1)</asp:ListItem>
-                                <asp:ListItem>WASHING (M1)</asp:ListItem>
-                                <asp:ListItem>BARREL (M1)</asp:ListItem>
-                                <asp:ListItem>AUTO INSPECTION (M1)</asp:ListItem>
-                                <asp:ListItem>TURNING WASING (M1)</asp:ListItem>
-                                <asp:ListItem>SHAFT ASSY (M1)</asp:ListItem>
-                                <asp:ListItem>MULTI SWISS (M1)</asp:ListItem>
-                                <asp:ListItem>S.G (M1)</asp:ListItem>
-                                <asp:ListItem>PRICKEL (M1)</asp:ListItem>
-                                <asp:ListItem>I-CUT,D-CUT R-GRINDING (M1)</asp:ListItem>
-                                <asp:ListItem>FACE GRINDING (M1)</asp:ListItem>
-                                <asp:ListItem>CHAMFER (M1)</asp:ListItem>
-                                <asp:ListItem>HEAT (M1)</asp:ListItem>
-                                <asp:ListItem>INSPECTION (M1)</asp:ListItem>
-                                <asp:ListItem>PACKING (M1)</asp:ListItem>
-                                <asp:ListItem>QC (M1)</asp:ListItem>
-                                <asp:ListItem>MM (M1)</asp:ListItem>
-                                <asp:ListItem>ENGINEER TECH (M1)</asp:ListItem>
-                                <asp:ListItem>ENGINEER TECH (M2)</asp:ListItem>
-                                <asp:ListItem>STAFF (M1)</asp:ListItem>
-                                <asp:ListItem>END BAR (M1)</asp:ListItem>
-                                <asp:ListItem>M-32 (M1)</asp:ListItem>
+                            <asp:ListItem>TORNOS &MITSUBISHI (M1)</asp:ListItem>
+                            <asp:ListItem>L-16 (M1)</asp:ListItem>
+                            <asp:ListItem>L-10 (M1)</asp:ListItem>
+                            <asp:ListItem>HOBBING (M1)</asp:ListItem>
+                            <asp:ListItem>B0205 (M1)</asp:ListItem>
+                            <asp:ListItem>RL-20 (M1)</asp:ListItem>
+                            <asp:ListItem>CUTTING & ESCO (M1)</asp:ListItem>
+                            <asp:ListItem>NP-GL (M1)</asp:ListItem>
+                            <asp:ListItem>TURNING MB50 (M1)</asp:ListItem>
+                            <asp:ListItem>DEBURRIG,DILL&TAPPING (M1)</asp:ListItem>
+                            <asp:ListItem>OCEAN (M1)</asp:ListItem>
+                            <asp:ListItem>ROLLING (M1)</asp:ListItem>
+                            <asp:ListItem>TURNING B-12,F16 (M1)</asp:ListItem>
+                            <asp:ListItem>CGM (M1)</asp:ListItem>
+                            <asp:ListItem>M/C CENTER (M1)</asp:ListItem>
+                            <asp:ListItem>WASHING (M1)</asp:ListItem>
+                            <asp:ListItem>BARREL (M1)</asp:ListItem>
+                            <asp:ListItem>AUTO INSPECTION (M1)</asp:ListItem>
+                            <asp:ListItem>TURNING WASING (M1)</asp:ListItem>
+                            <asp:ListItem>SHAFT ASSY (M1)</asp:ListItem>
+                            <asp:ListItem>MULTI SWISS (M1)</asp:ListItem>
+                            <asp:ListItem>S.G (M1)</asp:ListItem>
+                            <asp:ListItem>PRICKEL (M1)</asp:ListItem>
+                            <asp:ListItem>I-CUT,D-CUT R-GRINDING (M1)</asp:ListItem>
+                            <asp:ListItem>FACE GRINDING (M1)</asp:ListItem>
+                            <asp:ListItem>CHAMFER (M1)</asp:ListItem>
+                            <asp:ListItem>HEAT (M1)</asp:ListItem>
+                            <asp:ListItem>INSPECTION (M1)</asp:ListItem>
+                            <asp:ListItem>PACKING (M1)</asp:ListItem>
+                            <asp:ListItem>QC (M1)</asp:ListItem>
+                            <asp:ListItem>MM (M1)</asp:ListItem>
+                            <asp:ListItem>ENGINEER TECH (M1)</asp:ListItem>
+                            <asp:ListItem>ENGINEER TECH (M2)</asp:ListItem>
+                            <asp:ListItem>STAFF (M1)</asp:ListItem>
+                            <asp:ListItem>END BAR (M1)</asp:ListItem>
+                            <asp:ListItem>M-32 (M1)</asp:ListItem>
 
-                                <asp:ListItem>TM-AUTOMOTIVE (M2)</asp:ListItem>
-                                <asp:ListItem>SR-MIYANO (M2)</asp:ListItem>
-                                <asp:ListItem>OCEAN-CUTTING (M2)</asp:ListItem>
-                                <asp:ListItem>HONING (M2)</asp:ListItem>
+                            <asp:ListItem>TM-AUTOMOTIVE (M2)</asp:ListItem>
+                            <asp:ListItem>SR-MIYANO (M2)</asp:ListItem>
+                            <asp:ListItem>OCEAN-CUTTING (M2)</asp:ListItem>
+                            <asp:ListItem>HONING (M2)</asp:ListItem>
 
+                            <asp:ListItem>IQC</asp:ListItem>
                         </asp:DropDownList>
                     </div>
                 </div>

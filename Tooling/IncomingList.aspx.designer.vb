@@ -11,68 +11,50 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class StockControl
+Partial Public Class IncomingList
 
     '''<summary>
-    '''ItemCode control.
+    '''GrdPrint control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ItemCode As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents GrdPrint As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''TxtItemCode control.
+    '''TxtTest control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TxtItemCode As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents TxtTest As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''BtnSearch control.
+    '''Label1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents BtnSearch As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''BtnClear control.
+    '''ReportPrintTag control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents BtnClear As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents ReportPrintTag As Global.Microsoft.Reporting.WebForms.ReportViewer
 
     '''<summary>
-    '''GridViewStock control.
+    '''BtnSelect2Edit control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents GridViewStock As Global.System.Web.UI.WebControls.GridView
-
-    '''<summary>
-    '''GridViewlatest control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents GridViewlatest As Global.System.Web.UI.WebControls.GridView
-
-    '''<summary>
-    '''BtnDownload control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents BtnDownload As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents BtnSelect2Edit As Global.System.Web.UI.WebControls.Button
 End Class

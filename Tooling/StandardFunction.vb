@@ -6,8 +6,6 @@ Imports System.Web.Script.Serialization
 Imports ClosedXML.Excel
 
 Public Class StandardFunction
-    '10.124.128.141 : test IP
-    'localhost : public IP
     Public Shared connectionString As String = "Data Source=10.121.1.85\SQLEXPRESS; User ID=sa;Password=sa@admin;Connection Timeout=50;"
     Public Shared Sub fillDataToDataGrid(targetDataGridView As GridView, sqlCommandStr As String)
         Dim ds As Data.DataSet = GetSQLDataSet(sqlCommandStr)
@@ -38,7 +36,7 @@ Public Class StandardFunction
         End If
     End Sub
 
-    Public Shared Function GetDataTable(ByVal sqlCommand As String) As DataTable
+    Public Shared Function GetDataTable(ByVal sqlCommand As String, Optional TblName As String = Nothing) As DataTable
         Dim table As New DataTable
         Try
             Dim DBConnection As SqlConnection = New SqlConnection(connectionString)
@@ -48,6 +46,9 @@ Public Class StandardFunction
             adapter.SelectCommand = command
 
             table.Locale = System.Globalization.CultureInfo.InvariantCulture
+            If Not IsNothing(TblName) Then
+                table.TableName = TblName
+            End If
 
             adapter.Fill(table)
         Catch ex As Exception
@@ -403,12 +404,12 @@ Public Class StandardFunction
 
         Dim ds As New DataSet
         For Each i In SqlString_Arr
-            ds.Tables.Add(GetDataTable(i))
+            ds.Tables.Add(GetDataTable(i(0), i(1))) 'i(0) == SQL, i(1) == TableName // FORMAT => arr({ i(0) , i(1) })
         Next
 
         Dim wb As New XLWorkbook
         For j = 0 To ds.Tables.Count - 1
-            Dim ws = wb.Worksheets.Add(ds.Tables(j), fileName & "(" & j & ")")
+            Dim ws = wb.Worksheets.Add(ds.Tables(j), ds.Tables(j).TableName)
             ws.Columns.AdjustToContents()
         Next
 

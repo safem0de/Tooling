@@ -10,6 +10,7 @@ Public Class NewItem
     ReadOnly StrDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Session("CanAccess") Then
+            Session("LastPage") = "~" & Request.RawUrl
             Response.Redirect("~/Login.aspx")
         End If
 
@@ -140,7 +141,7 @@ Public Class NewItem
     End Function
 
     Function CreateImgByte(ItemCode As String, ItemName As String, Spec As String) As String
-        'Dim fileName = "Images/Qr.jpg"
+
         Dim Writer As BarcodeWriter = New BarcodeWriter
         Writer.Format = BarcodeFormat.QR_CODE
         Dim A = New EncodingOptions
@@ -341,10 +342,11 @@ Public Class NewItem
     End Sub
 
     Protected Sub BtnPrintAll_Click(sender As Object, e As EventArgs) Handles BtnPrintAll.Click
-        Dim Sql = "SELECT [ItemCode]
-		,[ItemName]
-		,[Spec]
-		,[Location]
+        Dim Sql = "
+        SELECT [ItemCode]
+		       ,[ItemName]
+		       ,[Spec]
+		       ,[Location]
 	        FROM [Tooling_Mecha].[dbo].[Tooling_Master] as t1
         LEFT JOIN [Tooling_Mecha].[dbo].[Location] as t2
         ON t1.[Location]= t2.[LocationName]

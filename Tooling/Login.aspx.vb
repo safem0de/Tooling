@@ -33,6 +33,11 @@
             Exit Sub
         End If
 
-        Response.Redirect("~/")
+        If Not IsNothing(Session("LastPage")) Then
+            Response.Redirect(Session("LastPage"))
+        Else
+            Response.Redirect("~/")
+        End If
+
     End Sub
 End Class

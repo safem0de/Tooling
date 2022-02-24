@@ -6,6 +6,7 @@ Public Class StockControl
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         If Not Session("CanAccess") Then
+            Session("LastPage") = "~" & Request.RawUrl
             Response.Redirect("~/Login.aspx")
         End If
 
@@ -30,8 +31,25 @@ Public Class StockControl
         On t1.[Recieve_id] = t2.[Recieve_id]
         WHERE [Status] = 0
         AND [ItemCode] like '" & TxtItemCode.Text & "%'
+        AND NOT Month(t1.[Recieve_date]) = Month(GetDate())
+        AND YEAR(t1.[Recieve_date]) <= YEAR(GetDate())
         "
         StandardFunction.fillDataToDataGrid(GridViewStock, Sqldt)
+
+        Dim Sqldt2 = "
+        SELECT t1.[Recieve_date]
+		        ,[ItemCode]
+		        ,[Qty]
+		        ,[LotNo]
+        FROM [Tooling_Mecha].[dbo].[Recieve_Tooling] as t1
+        Left Join [Tooling_Mecha].[dbo].[Recieve_Tooling_Details] as t2
+        On t1.[Recieve_id] = t2.[Recieve_id]
+        WHERE [Status] = 0
+        AND [ItemCode] like '" & TxtItemCode.Text & "%'
+        AND Month(t1.[Recieve_date]) = Month(GetDate())
+        AND YEAR(t1.[Recieve_date]) = YEAR(GetDate())
+        "
+        StandardFunction.fillDataToDataGrid(GridViewlatest, Sqldt2)
     End Sub
 
     Protected Sub ChkBoxStatus_CheckedChanged(sender As Object, e As EventArgs)
@@ -45,7 +63,6 @@ Public Class StockControl
 
 
             If chkRow.Checked Then
-                'MsgBox(row.Cells(4).Text)
 
                 Dim SqlUpdate As String = "
                 UPDATE [Tooling_Mecha].[dbo].[Recieve_Tooling_Details]
@@ -56,8 +73,8 @@ Public Class StockControl
                 Try
                     con.ConnectionString = StandardFunction.connectionString 'คำสั่งเชื่อม SQL จาก IP ไหน,Password อะไร'
                     con.Open()
-                    Command = New SqlCommand(SqlUpdate, con)
-                    Command.ExecuteNonQuery() 'คำสั่งเปิดใช้งาน การเชื่อมต่อ Sql'
+                    command = New SqlCommand(SqlUpdate, con)
+                    command.ExecuteNonQuery() 'คำสั่งเปิดใช้งาน การเชื่อมต่อ Sql'
 
                 Catch ex As Exception
                     Page.ClientScript.RegisterStartupScript(Me.GetType(), "window-script", "alert('ผิด');", True)
@@ -108,8 +125,44 @@ Public Class StockControl
         "
 
         Dim arr As New ArrayList
-        arr.Add(NotShow)
-        arr.Add(Show)
+        arr.Add({NotShow, "NotShow"})
+        arr.Add({Show, "Show"})
         StandardFunction.ExportExcelMultiSheet(Me, arr, "HistoryFIFO")
     End Sub
+
+    Protected Sub ChkBoxLatest_CheckedChanged(sender As Object, e As EventArgs)
+        Dim StrDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+
+        Dim con As New SqlConnection
+        Dim command As SqlCommand
+
+        For Each row As GridViewRow In GridViewlatest.Rows
+            Dim chkRow As CheckBox = TryCast(row.Cells(0).FindControl("ChkBoxLatest"), CheckBox)
+
+            If chkRow.Checked Then
+
+                Dim SqlUpdate As String = "
+                UPDATE [Tooling_Mecha].[dbo].[Recieve_Tooling_Details]
+                   SET [Status] = 1
+                      ,[AvailableDate] = Convert(datetime,'" & StrDate & "')
+                 WHERE [LotNo] = '" & row.Cells(4).Text & "'"
+
+                Try
+                    con.ConnectionString = StandardFunction.connectionString 'คำสั่งเชื่อม SQL จาก IP ไหน,Password อะไร'
+                    con.Open()
+                    command = New SqlCommand(SqlUpdate, con)
+                    command.ExecuteNonQuery() 'คำสั่งเปิดใช้งาน การเชื่อมต่อ Sql'
+
+                Catch ex As Exception
+                    Page.ClientScript.RegisterStartupScript(Me.GetType(), "window-script", "alert('ผิด');", True)
+                Finally
+                    con.Close()
+                    Page.ClientScript.RegisterStartupScript(Me.GetType(), "window-script", "alert('OK');", True)
+                End Try
+            End If
+        Next
+
+        LoadTable()
+    End Sub
+
 End Class

@@ -36,8 +36,9 @@
         left join [Tooling_Mecha].[dbo].[UserLogin] as t3
         on t1.EmpNo = t3.EmpNo
 
-		WHERE Month([Issue_date]) = Month(GETDATE())
-		OR Month([Issue_date]) = Month(GETDATE())-1
+		WHERE (Month([Issue_date]) = Month(GETDATE())
+		OR Month([Issue_date]) = Month(GETDATE())-1)
+        AND Year([Issue_date]) = Year(GETDATE())
         )
 
         SELECT * FROM

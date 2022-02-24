@@ -13,7 +13,7 @@
     </asp:PlaceHolder>
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/icon_PKk_icon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <script src="Scripts/Chart.js"></script>
     <script src="Scripts/Chart.min.js"></script>
@@ -92,7 +92,9 @@
                         <div class="dropdown-menu" aria-labelledby="navbarLocation">
                             <a class="dropdown-item" runat="server" href="~/UserList">Regitered Users (รายชื่อผู้ลงทะเบียน)</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" runat="server" href="~/">Incoming (การตรวจสอบสเปคก่อนการรับ)</a>
+                            <a class="dropdown-item" runat="server" href="~/Incoming">Incoming Input Request (รีเควสเช็คสเปค)</a>
+                            <a class="dropdown-item" runat="server" href="~/IncomingList">Incoming Tag Print (พิมพ์รายการรีเควสเช็คสเปค)</a>
+                            <a class="dropdown-item" runat="server" href="~/QC_Incoming/IncomingItems">IQC Incoming Details (รายการรีเควสเช็คสเปค)</a>
                             <a class="dropdown-item" runat="server" href="~/">Drawing (แบบผลิตสำหรับการสั่งซื้อ)</a>
                         </div>
                     </li>
